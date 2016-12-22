@@ -12,7 +12,7 @@ Project description
 -------------------
 This library implements the Video Scaling for TextureView
 
- ![](http://screenshots.collabstar.com/np/screen1.png)
+ ![](https://github.com/brezenhem/ScaleVideoView/blob/master/screen1.png)
  
     FIT_XY,
     FIT_START,

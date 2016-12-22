@@ -55,7 +55,7 @@ To use the widget, simply add this code to your xml layout:
         android:layout_height="match_parent"
         android:id="@+id/scale_view"/>
         
-ScaleTextureView scaleView = (ScaleTextureView) findViewById(R.id.scale_view1);
+ScaleTextureView scaleView = (ScaleTextureView) findViewById(R.id.scale_view);
 
 scaleView.setRawData(raw);
 scaleView.setLooping(true);

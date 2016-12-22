@@ -14,6 +14,8 @@ This library implements the Video Scaling for TextureView
 
  ![](https://github.com/brezenhem/ScaleVideoView/blob/master/screen1.png)
  
+ Scaling types available:
+
     FIT_XY,
     FIT_START,
     FIT_CENTER,
@@ -52,9 +54,18 @@ To use the widget, simply add this code to your xml layout:
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/scale_view"/>
+        
+ScaleTextureView scaleView = (ScaleTextureView) findViewById(R.id.scale_view1);
 
-To update the indicator, simply call the following method:
+scaleView.setRawData(raw);
+scaleView.setLooping(true);
+scaleView.setScalableType(ScalableType.CENTER_CROP);
 
-AnimationProgressBar mAnimationProgressBar = (AnimationProgressBar) findViewById(R.id.progress);
-mAnimationProgressBar.updateProgressIndicator();
+scaleView.prepare(new MediaPlayer.OnPreparedListener() {
+    @Override
+    public void onPrepared(MediaPlayer mp) {
+        scaleView.setVisibility(View.VISIBLE);
+        scaleView.start();
+    }
+});
 ```
